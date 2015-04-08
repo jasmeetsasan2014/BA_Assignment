@@ -374,3 +374,59 @@ for(i in 1:20){
 
 ###########################################################################################
 ###########################################################################################
+
+
+
+##############################################################################
+########################### Exporting the prediction   ##########################
+##############################################################################
+
+
+
+pred.SPIndex.JustName<-c()
+for(i in 1:20){
+  
+  pred.SPIndex.JustName[i]<- paste("pred.SPIndex",city.name[i], sep=".")
+}
+
+#pred.SPIndex.JustName[1]
+
+
+trial.df00<- as.data.frame(c())
+for(i in 1:20){    
+
+trial.df0<- as.data.frame(t(tapply(eval(parse(text=pred.SPIndex.JustName[i]))$mean, 
+                list(year = floor(time(eval(parse(text=pred.SPIndex.JustName[i]))$mean)), 
+                month = month.abb[cycle(eval(parse(text=pred.SPIndex.JustName[i]))$mean)]),c)))
+
+  trial.df0$Region<- city.name[i]
+  
+  trial.df00<- rbind(trial.df0,trial.df00)
+}
+
+tail(trial.df00)
+
+# saving the dataset in csv format
+write.table(trial.df00, file="PredictedValues.csv", sep=",")
+
+
+
+
+
+###########################################################################################
+###########################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################################
+###########################################################################################
