@@ -25,4 +25,7 @@ Step 6: Run the entire script of Model2.R. Ignore the warnings if any.
 
 Step 7: Check all the folders and files created.
 
-Step 8: We are all set for our analysis now!!!!!!
+Step 8: To run 4th script i.e. Model3.R, you need to download the csv attached (CompleDataSetWithForecast.csv) with deliverable or download it from Github.
+		Don't rename it. Move the downloaded csv in your R directory
+
+Step 8: We are all set for our analysis now!!!!

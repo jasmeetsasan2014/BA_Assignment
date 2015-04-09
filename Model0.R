@@ -1,4 +1,4 @@
-sp.RootDir<- "C:/Users/jasmeet/Desktop/BA_Assignment/Google"
+sp.RootDir<- "C:/Users/jasmeet/Desktop/BA_Assignment/Yahoo"
 
 
 #####   @Author: Jasmeet Singh Sasan #####
